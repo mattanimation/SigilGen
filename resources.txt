@@ -1,0 +1,708 @@
+http://shop.hauntwell.com/
+
+https://www.google.com/search?q=pennsylvania+dutch+hex+signs&source=lnms&tbm=isch&sa=X&ved=0ahUKEwj9x4jbnrvUAhVr04MKHVQUAScQ_AUICygC&biw=2400&bih=1339#imgrc=CVHiI6EAfnc1BM:
+
+http://www.gutenberg.org/browse/scores/top
+
+https://www.openprocessing.org/browse#
+
+"""
+From Andy Reagan
+You can make the sentiment time series from those 10,222x200 matrices, let me explain how quickly.
+Take each column (10,222 long), and normalize it to have a sum of 1 (divide by the sum).
+Then take a the dot product (a dot b = a_1 * b_1 + ... + a_10222 * b_10222) of each of the 200 columns with the sentiment vector.
+Those 200 numbers are the time series.
+Here's that vector that you need to multiply by:
+http://hedonometer.org/data/labMT/labMTscores-english.csv
+
+I'm excited to see what you come up with!
+
+Here's a link to the "mode" for each book:
+http://compstorylab.org/share/papers/reagan2016b/
+actual link:
+http://compstorylab.org/share/papers/reagan2016b/mode-lists.zip
+"""
+
+MAIN DATA POINTS
+=================
+	*FICTION or NON-FICTION
+	*GENRE / CLASSIFICATION
+	*PAGE COUNT?
+	*STORY ARC / PLOT TYPES
+		1. Rags-to-riches,
+		2. Tragedy,
+		3. Man-in-a-hole (see below for more),
+		4. Icarus,
+		5. Cindarella,
+		6. Oedipus.
+	*LEXICLE (color or number or both) - represents reading comprehension level
+		- or do complexity of vocabulary from unique word count and vocab score? like the sentiment analysis
+	*MOOD / SENTIMENT
+		-as gradient of colors center being highes concentration and moving outword
+	*PERSPECTIVE 
+		-third, or first
+	*MORAL
+		should this be known up front?
+	*CONTENT | LANGUAGE | STRUCTURE
+
+
+
+================
+
+perspective
+http://www.criticalreading.com/novels.htm
+
+7 plot types
+https://en.wikipedia.org/wiki/The_Seven_Basic_Plots
+
+*Overcoming the monster 
+*Rags to riches 
+*The Quest 
+*Voyage and return 
+*Comedy
+*Tradgedy 
+*Rebirth
+
+refs:
+data for arc curves
+https://arxiv.org/pdf/1606.07772.pdf
+http://www.uvm.edu/storylab/2016/11/07/emotional-arcs/
+http://www.uvm.edu/storylab/share/papers/reagan2016b/index.html
+https://www.technologyreview.com/s/601848/data-mining-reveals-the-six-basic-emotional-arcs-of-storytelling/
+wind in the willows: http://hedonometer.org/books/v3/289/?lens=[3,7]
+https://github.com/andyreagan/core-stories
+
+
+dataviz
+https://www.quora.com/Whats-the-best-way-to-visualize-high-dimensional-data
+https://www.mathworks.com/help/stats/glyphplot.html
+https://en.wikipedia.org/wiki/Radar_chart
+http://color.method.ac/
+http://bl.ocks.org/e-/5244131
+http://bl.ocks.org/bbest/2de0e25d4840c68f2db1
+https://www.visualcinnamon.com/2013/07/self-organizing-maps-creating-hexagonal.html
+http://colah.github.io/posts/2014-10-Visualizing-MNIST/
+
+http://circos.ca/
+http://circos.ca/presentations/articles/amsci_cover/
+https://github.com/nicgirault/circosjs
+similar https://bl.ocks.org/mbostock/4062006
+
+http://www.hiveplot.com/
+http://mkweb.bcgsc.ca/pi/piday2014/dots.mhtml - feynman point
+
+readability score / mapping
+http://www.readabilityformulas.com/articles/dale-chall-readability-word-list.php
+https://datayze.com/readability-analyzer.php
+
+python text mapping
+https://pypi.python.org/pypi/textstat
+
+
+dewy decimal system
+https://en.wikipedia.org/wiki/List_of_Dewey_Decimal_classes
+
+1	Class 000 – Computer science, information & general works
+2	Class 100 – Philosophy & psychology
+3	Class 200 – Religion
+4	Class 300 – Social sciences
+5	Class 400 – Language
+6	Class 500 – Science
+7	Class 600 – Technology
+8	Class 700 – Arts & recreation
+9	Class 800 – Literature
+10	Class 900 – History & geography
+
+universal decimal system
+https://en.wikipedia.org/wiki/Universal_Decimal_Classification
+
+
+genre list according to dept. of edu
+http://www.cde.ca.gov/ci/cr/rl/litrlgenres.asp
+
+All Fiction
+Drama
+Stories composed in verse or prose, usually for theatrical performance, where conflicts and emotion are expressed through dialogue and action.
+
+Fable
+Narration demonstrating a useful truth, especially in which animals speak as humans; legendary, supernatural tale.
+
+Fairy Tale 
+Story about fairies or other magical creatures, usually for children.
+
+Fantasy
+Fiction with strange or other worldly settings or characters; fiction which invites suspension of reality.
+
+Fiction
+Narrative literary works whose content is produced by the imagination and is not necessarily based on fact.
+
+Fiction in Verse 
+Full-length novels with plot, subplot(s), theme(s), major and minor characters, in which the narrative is presented in (usually blank) verse form.
+
+Folklore
+The songs, stories, myths, and proverbs of a people or "folk" as handed down by word of mouth.
+
+Historical Fiction 
+Story with fictional characters and events in a historical setting.
+
+Horror
+Fiction in which events evoke a feeling of dread in both the characters and the reader.
+
+Humor
+Fiction full of fun, fancy, and excitement, meant to entertain; but can be contained in all genres
+
+Legend 
+Story, sometimes of a national or folk hero, which has a basis in fact but also includes imaginative material.
+
+Mystery 
+Fiction dealing with the solution of a crime or the unraveling of secrets.
+
+Mythology
+Legend or traditional narrative, often based in part on historical events, that reveals human behavior and natural phenomena by its symbolism; often pertaining to the actions of the gods.
+
+Poetry
+Verse and rhythmic writing with imagery that creates emotional responses.
+
+Realistic Fiction 
+Story that can actually happen and is true to life.
+
+Science Fiction 
+Story based on impact of actual, imagined, or potential science, usually set in the future or on other planets.
+
+Short Story 
+Fiction of such brevity that it supports no subplots.
+
+Tall Tale 
+Humorous story with blatant exaggerations, swaggering heroes who do the impossible with nonchalance.
+
+All Nonfiction
+Biography/Autobiography
+Narrative of a person's life, a true story about a real person.
+
+Essay
+A short literary composition that reflects the author's outlook or point.
+
+Narrative Nonfiction 
+Factual information presented in a format which tells a story.
+
+Nonfiction
+Informational text dealing with an actual, real-life subject.
+
+Speech
+Public address or discourse.
+
+
+wikipedia genre list
+https://en.wikipedia.org/wiki/List_of_writing_genres
+
+classic:
+
+	Fiction
+	Comedy
+	Drama
+	Horror
+	Non-fiction
+	Realistic
+	Romantic
+	Satire
+	Tragedy
+	Tragicomedy
+	Fantasy
+	Mythology
+
+by fiction and non-fiction
+
+Common genres: fiction
+Subsets of genres, known as common genres, have developed from the archetypes of genres in written expression.
+
+	Classic – fiction that has become part of an accepted literary canon, widely taught in schools
+	Crime/detective – fiction about a crime, how the criminal gets caught, and the repercussions of the crime
+	Fable – legendary, supernatural tale demonstrating a useful truth
+	Fairy tale – story about fairies or other magical creatures
+	Fan fiction – fiction written by a fan of, and featuring characters from, a particular TV series, movie, or book
+	Fantasy – fiction with strange or otherworldly settings or characters; fiction which invites suspension of reality
+	Fiction in verse – full-length novels with plot, subplot(s), theme(s), major and minor characters, in which the narrative is presented in verse form (usually free verse)
+	Fiction narrative – literary works whose content is produced by the imagination and is not necessarily based on fact
+	Folklore – the songs, stories, myths, and proverbs of a people or "folk" as handed down by word of mouth
+	Historical fiction – story with fictional characters and events in a historical setting
+	Horror – fiction in which events evoke a feeling of dread and sometimes fear in both the characters and the reader
+	Humor – Usually a fiction full of fun, fancy, and excitement, meant to entertain and sometimes cause intended laughter; but can be contained in all genres
+	Legend – story, sometimes of a national or folk hero, that has a basis in fact but also includes imaginative material
+	Magical realism – story where magical or unreal elements play a natural part in an otherwise realistic environment
+	Meta fiction (also known as romantic irony in the context of Romantic works of literature) – uses self-reference to draw attention to itself as a work of art while exposing the "truth" of a story
+	Mystery – this is fiction dealing with the solution of a crime or the unraveling of secrets
+	Mythology – legend or traditional narrative, often based in part on historical events, that reveals human behavior and natural phenomena by its symbolism; often pertaining to the actions of the gods
+	Mythopoeia – fiction in which characters from religious mythology, traditional myths, folklore and/or history are recast into a re-imagined realm created by the author
+	Picture book – picture storybook is a book with very little words and a lot of pictures, picture stories are usually for little kids
+	Realistic fiction – story that is true to life
+	Science fiction – story based on the impact of actual, imagined, or potential science, usually set in the future or on other planets
+	Short story – fiction of such brevity that it supports no subplots
+	Suspense/thriller – fiction about harm about to befall a person or group and the attempts made to evade the harm
+	Tall tale – humorous story with blatant exaggerations, such as swaggering heroes who do the impossible with nonchalance
+	Western  – set in the American Old West frontier and typically set in the late eighteenth to late nineteenth century
+
+
+Common Genres: Non Fiction
+	Biography/autobiography  – narrative of a person's life; a true story about a real person and there are formed with beats from adrus
+	Essay  – a short literary composition that reflects the author's outlook or point.
+	Owner's manual (also Instruction manual, User's guide)  – an instructional book or booklet that is supplied with consumer products such as vehicles, home appliances, firearms, toys and computer peripherals
+	Journalism – reporting on news and current events
+	Lab Report  – a report of an experiment
+	Memoir  – factual story that focuses on a significant relationship between the writer and a person, place, or object; reads like a short novel
+	Narrative nonfiction/personal narrative  – factual information about a significant event presented in a format which tells a story
+	Reference book  – such as a dictionary, thesaurus, encyclopedia, almanac, or atlas
+	Self-help book  – information with the intention of instructing readers on solving personal problems.
+	Speech  – public address or discourse
+	Textbook  – authoritative and detailed factual description of a topic.
+
+
+potential meta data sources
+http://www.loc.gov/standards/marcxml//
+http://isbndb.com/
+Lexile: 
+https://lexile.com/about-lexile/lexile-overview/lexile-infographic/
+http://cdn.lexile.com/cms_page_media/135/Lexile%20Map%208.5x11%202015.pdf
+
+good reads
+https://www.goodreads.com/api
+good reads genres
+
+Art
+Biography
+Business
+Chick Lit
+Children's
+Christian
+Classics
+Comics
+Contemporary
+Cookbooks
+Crime
+Ebooks
+Fantasy
+Fiction
+Gay and Lesbian
+Graphic Novels
+Historical Fiction
+History
+Horror
+Humor and Comedy
+Manga
+Memoir
+Music
+Mystery
+Nonfiction
+Paranormal
+Philosophy
+Poetry
+Psychology
+Religion
+Romance
+Science
+Science Fiction
+Self Help
+Suspense
+Spirituality
+Sports
+Thriller
+Travel
+Young Adult
+
+
+AMAZON Details:
+Age Range: 8 - 11 years
+Grade Level: 3 - 6
+Lexile Measure: 890 (What's this?)
+Series: Bantam Classics
+Paperback: 272 pages
+Publisher: Bantam Classics; Reissue edition (June 1, 1984)
+Language: English
+ISBN-10: 0553213458
+ISBN-13: 978-0553213454
+
+
+
+music genres
+
+LIST OF TYPE OF MUSIC | MUSIC GENRES
+
+Alternative
+Art Punk
+Alternative Rock
+College Rock
+Crossover Thrash (thx Kevin G)
+Crust Punk (thx Haug)
+Experimental Rock
+Folk Punk
+Goth / Gothic Rock
+Grunge
+Hardcore Punk
+Hard Rock
+Indie Rock
+Lo-fi (hat tip to Ben Vee Bedlamite)
+New Wave
+Progressive Rock
+Punk
+Shoegaze (with thx to Jackie Herrera)
+Steampunk (with thx to Christopher Schaeffer)
+Anime
+Blues
+Acoustic Blues
+Chicago Blues
+Classic Blues
+Contemporary Blues
+Country Blues
+Delta Blues
+Electric Blues
+Ragtime Blues (cheers GFS)
+Children’s Music
+Lullabies
+Sing-Along
+Stories
+Classical
+Avant-Garde
+Baroque
+Chamber Music
+Chant
+Choral
+Classical Crossover
+Contemporary Classical (thx Julien Palliere)
+Early Music
+Expressionist (thx Mr. Palliere)
+High Classical
+Impressionist
+Medieval
+Minimalism
+Modern Composition
+Opera
+Orchestral
+Renaissance
+Romantic (early period)
+Romantic (later period)
+Wedding Music
+Comedy
+Novelty
+Standup Comedy
+Vaudeville (cheers Ben Vee Bedlamite)
+Commercial (thank you Sheldon Reynolds)
+Jingles
+TV Themes
+Country
+Alternative Country
+Americana
+Bluegrass
+Contemporary Bluegrass
+Contemporary Country
+Country Gospel
+Country Pop (thanks Sarah Johnson)
+Honky Tonk
+Outlaw Country
+Traditional Bluegrass
+Traditional Country
+Urban Cowboy
+Dance (EDM – Electronic Dance Music – see Electronic below – with thx to Eric Shaffer-Whiting & Drew :-))
+Club / Club Dance (thx Luke Allfree)
+Breakcore
+Breakbeat / Breakstep
+Brostep (cheers Tom Berckley)
+Chillstep (thx Matt)
+Deep House (cheers Venus Pang)
+Dubstep
+Electro House (thx Luke Allfree)
+Electroswing
+Exercise
+Future Garage (thx Ran’dom Haug)
+Garage
+Glitch Hop (cheers Tom Berckley)
+Glitch Pop (thx Ran’dom Haug)
+Grime (thx Ran’dom Haug / Matthew H)
+Hardcore
+Hard Dance
+Hi-NRG / Eurodance
+Horrorcore (thx Matt)
+House
+Jackin House (with thx to Jermaine Benjamin Dale Bruce)
+Jungle / Drum’n’bass
+Liquid Dub(thx Ran’dom Haug)
+Regstep (thanks to ‘Melia G)
+Speedcore (cheers Matt)
+Techno
+Trance
+Trap (thx Luke Allfree)
+Disney
+Easy Listening
+Bop
+Lounge
+Swing
+Electronic
+2-Step (thx Ran’dom Haug)
+8bit – aka 8-bit, Bitpop and Chiptune – (thx Marcel Borchert)
+Ambient
+Bassline (thx Leon Oliver)
+Chillwave(thx Ran’dom Haug)
+Chiptune (kudos to Dominik Landahl)
+Crunk (with thx to Jillian Edwards)
+Downtempo
+Drum & Bass (thx Luke Allfree)
+Electro
+Electro-swing (thank you Daniel Forthofer)
+Electronica
+Electronic Rock
+Hardstyle (kudos to Dominik Landahl)
+IDM/Experimental
+Industrial
+Trip Hop (thank you Michael Tait Tafoya)
+Enka
+French Pop
+German Folk
+German Pop
+Fitness & Workout
+Hip-Hop/Rap
+Alternative Rap
+Bounce
+Dirty South
+East Coast Rap
+Gangsta Rap
+Hardcore Rap
+Hip-Hop
+Latin Rap
+Old School Rap
+Rap
+Turntablism (thank you Luke Allfree)
+Underground Rap
+West Coast Rap
+Holiday
+Chanukah
+Christmas
+Christmas: Children’s
+Christmas: Classic
+Christmas: Classical
+Christmas: Comedy
+Christmas: Jazz
+Christmas: Modern
+Christmas: Pop
+Christmas: R&B
+Christmas: Religious
+Christmas: Rock
+Easter
+Halloween
+Holiday: Other
+Thanksgiving
+Indie Pop
+Industrial
+Inspirational – Christian & Gospel
+CCM
+Christian Metal
+Christian Pop
+Christian Rap
+Christian Rock
+Classic Christian
+Contemporary Gospel
+Gospel
+Christian & Gospel
+Praise & Worship
+Qawwali (with thx to Jillian Edwards)
+Southern Gospel
+Traditional Gospel
+Instrumental
+March (Marching Band)
+J-Pop
+J-Rock
+J-Synth
+J-Ska
+J-Punk
+Jazz
+Acid Jazz (with thx to Hunter Nelson)
+Avant-Garde Jazz
+Bebop (thx Mwinogo1)
+Big Band
+Blue Note (with thx to Jillian Edwards)
+Contemporary Jazz
+Cool
+Crossover Jazz
+Dixieland
+Ethio-jazz (with thx to Jillian Edwards)
+Fusion
+Gypsy Jazz (kudos to Mike Tait Tafoya)
+Hard Bop
+Latin Jazz
+Mainstream Jazz
+Ragtime
+Smooth Jazz
+Trad Jazz
+K-Pop
+Karaoke
+Kayokyoku
+Latin
+Alternativo & Rock Latino
+Argentine tango (gracias P. Moth & Sandra Sanders)
+Baladas y Boleros
+Bossa Nova (with thx to Marcos José Sant’Anna Magalhães & Alex Ede for the reclassification)
+Brazilian
+Contemporary Latin
+Cumbia (gracias Richard Kemp)
+Flamenco / Spanish Flamenco (thank you Michael Tait Tafoya & Sandra Sanders)
+Latin Jazz
+Nuevo Flamenco (and again Michael Tafoya)
+Pop Latino
+Portuguese fado (and again Sandra Sanders)
+Raíces
+Reggaeton y Hip-Hop
+Regional Mexicano
+Salsa y Tropical
+New Age
+Environmental
+Healing
+Meditation
+Nature
+Relaxation
+Travel
+Opera
+Pop
+Adult Contemporary
+Britpop
+Bubblegum Pop (thx Haug & John Maher)
+Chamber Pop (thx Haug)
+Dance Pop
+Dream Pop (thx Haug)
+Electro Pop (thx Haug)
+Orchestral Pop (thx Haug)
+Pop/Rock
+Pop Punk (thx Makenzie)
+Power Pop (thx Haug)
+Soft Rock
+Synthpop (thx Haug)
+Teen Pop
+R&B/Soul
+Contemporary R&B
+Disco (not a top level genre Sheldon Reynolds!)
+Doo Wop
+Funk
+Modern Soul (Cheers Nik)
+Motown
+Neo-Soul
+Northern Soul (Cheers Nik & John Maher)
+Psychedelic Soul (thank you John Maher)
+Quiet Storm
+Soul
+Soul Blues (Cheers Nik)
+Southern Soul (Cheers Nik)
+Reggae
+2-Tone (thx GFS)
+Dancehall
+Dub
+Roots Reggae
+Ska
+Rock
+Acid Rock (with thanks to Alex Antonio)
+Adult-Oriented Rock (thanks to John Maher)
+Afro Punk
+Adult Alternative
+Alternative Rock (thx Caleb Browning)
+American Trad Rock
+Anatolian Rock
+Arena Rock
+Art Rock
+Blues-Rock
+British Invasion
+Cock Rock
+Death Metal / Black Metal
+Doom Metal (thx Kevin G)
+Glam Rock
+Gothic Metal (fits here Sam DeRenzis – thx)
+Grind Core
+Hair Metal
+Hard Rock
+Math Metal (cheers Kevin)
+Math Rock (thx Ran’dom Haug)
+Metal
+Metal Core (thx Ran’dom Haug)
+Noise Rock (genre – Japanoise – thx Dominik Landahl)
+Jam Bands
+Post Punk (thx Ben Vee Bedlamite)
+Prog-Rock/Art Rock
+Progressive Metal (thx Ran’dom Haug)
+Psychedelic
+Rock & Roll
+Rockabilly (it’s here Mark Murdock!)
+Roots Rock
+Singer/Songwriter
+Southern Rock
+Spazzcore (thx Haug)
+Stoner Metal (duuuude)
+Surf
+Technical Death Metal (cheers Pierre)
+Tex-Mex
+Time Lord Rock (Trock) ~ (thanks to ‘Melia G)
+Trash Metal (thanks to Pierre A)
+Singer/Songwriter
+Alternative Folk
+Contemporary Folk
+Contemporary Singer/Songwriter
+Indie Folk (with thanks to Andrew Barrett)
+Folk-Rock
+Love Song (Chanson – merci Marcel Borchert)
+New Acoustic
+Traditional Folk
+Soundtrack
+Foreign Cinema
+Movie Soundtrack (thanks Julien)
+Musicals
+Original Score
+Soundtrack
+TV Soundtrack
+Spoken Word
+Tex-Mex / Tejano (with thx to Israel Lopez)
+Chicano
+Classic
+Conjunto
+Conjunto Progressive
+New Mex
+Tex-Mex
+Vocal
+A cappella (with kudos to Sheldon Reynolds)
+Barbershop (with thx to Kelly Chism)
+Doo-wop (with thx to Bradley Thompson)
+Gregorian Chant (hat tip to Deborah Knight-Nikifortchuk)
+Standards
+Traditional Pop
+Vocal Jazz
+Vocal Pop
+World
+Africa
+Afro-Beat
+Afro-Pop
+Asia
+Australia
+Cajun
+Calypso (thx Gerald John)
+Caribbean
+Carnatic (Karnataka Sanghetha – thx Abhijith)
+Celtic
+Celtic Folk
+Contemporary Celtic
+Coupé-décalé (thx Samy) – Congo
+Dangdut (thank you Achmad Ivanny)
+Drinking Songs
+Drone (with thx to Robert Conrod)
+Europe
+France
+Hawaii
+Hindustani (thank you Abhijith)
+Indian Ghazal (thank you Gitika Thakur)
+Indian Pop
+Japan
+Japanese Pop
+Klezmer
+Mbalax (thank you Samy) – Senegal
+Middle East
+North America
+Ode (thank you Sheldon Reynolds)
+Piphat (cheers Samy B) – Thailand
+Polka
+Soca (thx Gerald John)
+South Africa
+South America
+Traditional Celtic
+Worldbeat
+Zydeco
